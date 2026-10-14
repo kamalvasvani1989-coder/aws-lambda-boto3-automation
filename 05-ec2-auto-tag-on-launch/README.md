@@ -199,6 +199,10 @@ The test instance was terminated after testing. Termination does not invoke the 
 | Start instance | Yes (`pending`) | Skipped, original tags kept ✅ |
 | Terminate instance | No | – |
 
+### Known limitation
+
+The function treats any instance without a `LaunchDate` tag as new. Instances that existed **before** the function was deployed have no `LaunchDate` tag, so the first time one of them is started, it receives that day's date rather than its real launch date. This was observed during Assignment 14 testing, when `lab-auto-stop` (launched on 2026-10-13) was started on 2026-10-14. Using the CloudTrail `RunInstances` event would avoid this, since it fires only on genuine launches.
+
 ---
 
 ## Security and production notes
