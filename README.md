@@ -9,15 +9,20 @@ All resources were deployed in **Asia Pacific (Sydney), `ap-southeast-2`**.
 | # | Assignment | Services | Folder |
 |---|---|---|---|
 | 1 | Automated EC2 instance management (start/stop by tag) | Lambda, EC2, IAM, CloudWatch Logs | [`01-ec2-tag-start-stop`](01-ec2-tag-start-stop/) |
+| 4 | Automatic EBS snapshot and cleanup, with weekly schedule | Lambda, EC2/EBS, IAM, EventBridge, CloudWatch Logs | [`04-ebs-snapshot-cleanup`](04-ebs-snapshot-cleanup/) |
 
 ## Repository structure
 
 ```
 .
 ├── README.md
-└── 01-ec2-tag-start-stop/
-    ├── README.md            # steps, explanation and screenshots
-    ├── lambda_function.py   # Lambda function code
+├── 01-ec2-tag-start-stop/
+│   ├── README.md            # steps, explanation and screenshots
+│   ├── lambda_function.py   # Lambda function code
+│   └── screenshots/
+└── 04-ebs-snapshot-cleanup/
+    ├── README.md
+    ├── lambda_function.py
     └── screenshots/
 ```
 
